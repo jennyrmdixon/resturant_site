@@ -15,7 +15,20 @@ module.exports = {
    devtool: 'inline-source-map',
    plugins: [
     new HtmlWebpackPlugin({
-      title: "Jenny's Lunchbox",
+      title: "Cosmic Corner",
     }),
   ],
-};
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+    ],
+    
+}
+}

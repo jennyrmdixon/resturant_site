@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'bebas';
+    src: url('BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/*Start CSS Reset Code
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*End Reset Code*/
+
+::selection {
+    background-color: blue;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgb(54,76,184);
+    background: radial-gradient(circle, rgba(54,76,184,1) 0%, rgba(252,70,239,1) 100%);
+}
+
+#nav {
+    background-color: black;
+    text-align: center;
+    padding: 5px 
+
+}
+
+#nav > * {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+#nav button {
+    background-color:  #bcb88a00;
+    color:white;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    border: 0px;
+
+}
+
+.fa-space-awesome {
+    color:white;
+}
+
+#nav button:hover {
+    color: blue;
+}
+
+#hero {
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+#hero h1 {
+    text-align: center;
+    font-family: 'bebas', sans-serif;
+    font-size: 8em;
+    padding-top: 10px;
+
+}
+
+#info {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:black;
+    color:white;
+    padding: 30px 50px 30px 50px;
+}
+
+#info div {
+    flex-basis: 50%;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
