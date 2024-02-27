@@ -70,7 +70,7 @@ select {
 /*End Reset Code*/
 
 ::selection {
-    background-color: blue;
+    background-color: #bc13fe;
 }
 
 body {
@@ -78,6 +78,8 @@ body {
     background: rgb(54,76,184);
     background: radial-gradient(circle, rgba(54,76,184,1) 0%, rgba(252,70,239,1) 100%);
 }
+
+/*Nav*/
 
 #nav {
     background-color: black;
@@ -93,28 +95,25 @@ body {
 }
 
 #nav button {
-    background-color:  #bcb88a00;
+    background-color: black;
     color:white;
     padding: 5px;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     border: 0px;
-
 }
+
+#nav button:hover {
+    color: #bc13fe;
+}
+
 
 .fa-space-awesome {
     color:white;
 }
 
-#nav button:hover {
-    color: blue;
-    text-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 2rem #bc13fe,
-    0 0 0.8rem #bc13fe,
-    0 0 2.8rem #bc13fe,
-    inset 0 0 1.3rem #bc13fe; 
-}
+/*Body*/
+
 
 #hero {
     padding-top: 10px;
@@ -133,9 +132,6 @@ h1 {
     0 0 21px #fff,
     0 0 42px #bc13fe,
     0 0 82px #bc13fe,
-    /* 0 0 92px #bc13fe,
-    0 0 102px #bc13fe,
-    0 0 151px #bc13fe; */
 }
 
 h3 {
@@ -149,15 +145,12 @@ h3 {
 #infoArea {
     width: 1200px;  
     background-color: black;
-    margin: auto;
-    text-align: center;
     display: block;
     grid-template-columns: 400px 400px;
     background-color: black;
     padding: 30px 50px 30px 50px;
     width: 1200px;    
-    margin: auto;
-    text-align: center;
+    margin: 20px auto;
     border-radius: 2rem;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
@@ -172,8 +165,6 @@ h3 {
    display: block;
     width: 800px;    
     margin: auto;
-    text-align: center;   
-
     
 }
 
@@ -181,7 +172,8 @@ h3 {
     color:white;
     display: grid;
     grid-template-columns: 400px 400px;
-    text-align: center;
+    grid-column-gap: 20px;
+
     
 }
 
@@ -193,7 +185,6 @@ h3 {
     padding: 30px 50px 30px 50px;
     width:1200px;
     margin: 20px auto;
-    text-align: center;
     border-radius: 2rem;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
@@ -201,7 +192,6 @@ h3 {
             0 0 0.8rem #bc13fe,
             0 0 2.8rem #bc13fe,
             inset 0 0 1.3rem #bc13fe; 
-   
 }
 
 
@@ -213,7 +203,6 @@ h3 {
     margin: 20px auto;
     padding-left: -20px;
 
-
 }
 
 
@@ -222,15 +211,23 @@ h3 {
 }
 
 
-.hidden {
-    display:none;
-}
-
-
-
 .menuItems div {
     text-align: left;
 }
 
 
+#footer {
+    background-color: black;
+    color: white;
+    padding:5px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    }
 
+#finePrint {
+    font-style: italic;
+    font-size: 0.8rem;
+    }
+    

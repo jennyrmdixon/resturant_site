@@ -5,8 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    print: './src/pagecontent.js',
+    main: './src/index.js',
+    content1: './src/headerFooterContent.js',
+    content2: './src/homeContent.js',
+    content3: './src/menuContent.js',
+
   },  output: {
     filename: '[name].bundle.js',
      path: path.resolve(__dirname, 'dist'),
@@ -16,7 +19,8 @@ module.exports = {
    plugins: [
     new HtmlWebpackPlugin({
       title: "Cosmic Corner",
-    }),
+      favicon: "./src/favicon.ico"
+    })
   ],
   module: {
     rules: [
