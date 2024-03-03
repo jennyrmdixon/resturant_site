@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'bebas';
-    src: url('BebasNeue-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-
 /*Start CSS Reset Code
 /* Box sizing rules */
 *,
@@ -67,16 +59,30 @@ textarea,
 select {
     font: inherit;
 }
+
 /*End Reset Code*/
 
+@font-face {
+    font-family: 'bebas';
+    src: url('BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+:root {
+    --brightAccent: #bc13fe;
+  }
+
+
 ::selection {
-    background-color: #bc13fe;
+    background-color: var(--brightAccent),
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background: rgb(54,76,184);
-    background: radial-gradient(circle, rgba(54,76,184,1) 0%, rgba(252,70,239,1) 100%);
+    background: rgb(54, 76, 184);
+    background: radial-gradient(circle, rgba(54, 76, 184, 1) 0%, rgba(252, 70, 239, 1) 100%);
 }
 
 /*Nav*/
@@ -84,19 +90,17 @@ body {
 #nav {
     background-color: black;
     text-align: center;
-    padding: 5px 
-
+    padding: 5px
 }
 
-#nav > * {
+#nav>* {
     padding-left: 10px;
     padding-right: 10px;
-
 }
 
 #nav button {
     background-color: black;
-    color:white;
+    color: white;
     padding: 5px;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
@@ -104,12 +108,12 @@ body {
 }
 
 #nav button:hover {
-    color: #bc13fe;
+    color: var(--brightAccent);
 }
 
 
 .fa-space-awesome {
-    color:white;
+    color: white;
 }
 
 /*Body*/
@@ -118,7 +122,6 @@ body {
 #hero {
     padding-top: 10px;
     text-align: center;
-
 }
 
 h1 {
@@ -126,12 +129,6 @@ h1 {
     font-family: 'bebas', sans-serif;
     font-size: 60px;
     padding-top: 30px;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #bc13fe,
-    0 0 82px #bc13fe,
 }
 
 h3 {
@@ -140,74 +137,60 @@ h3 {
     font-size: 30px;
 }
 
+#infoArea, #menuItemsArea
+
+{
+    width: 1200px;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem var(--brightAccent),
+        0 0 0.8rem var(--brightAccent),
+        0 0 2.8rem var(--brightAccent),
+        inset 0 0 1.3rem var(--brightAccent);
+}
 
 
 #infoArea {
-    width: 1200px;  
-    background-color: black;
-    display: block;
     grid-template-columns: 400px 400px;
-    background-color: black;
     padding: 30px 50px 30px 50px;
-    width: 1200px;    
-    margin: 20px auto;
-    border-radius: 2rem;
-    box-shadow: 0 0 .2rem #fff,
-            0 0 .2rem #fff,
-            0 0 2rem #bc13fe,
-            0 0 0.8rem #bc13fe,
-            0 0 2.8rem #bc13fe,
-            inset 0 0 1.3rem #bc13fe; 
 }
 
 
 #infoContainer {
-   display: block;
-    width: 800px;    
+    display: block;
+    width: 800px;
     margin: auto;
-    
 }
 
 #info {
-    color:white;
+    color: white;
     display: grid;
     grid-template-columns: 400px 400px;
     grid-column-gap: 20px;
-
-    
 }
-
 
 #menuItemsArea {
-    color:white;
-    background-color: black;
-    margin: 50px 50px;
     padding: 30px 50px 30px 50px;
-    width:1200px;
     margin: 20px auto;
     border-radius: 2rem;
-    box-shadow: 0 0 .2rem #fff,
-            0 0 .2rem #fff,
-            0 0 2rem #bc13fe,
-            0 0 0.8rem #bc13fe,
-            0 0 2.8rem #bc13fe,
-            inset 0 0 1.3rem #bc13fe; 
 }
 
-
 .menuItems {
-    display:grid;
+    display: grid;
     grid-template-columns: 150px 300px 150px 300px;
     grid-column-gap: 20px;
-    width:800px;
+    width: 800px;
     margin: 20px auto;
     padding-left: -20px;
-
 }
 
 
 #info div p {
-   font-size: 18px;
+    font-size: 18px;
 }
 
 
@@ -219,15 +202,14 @@ h3 {
 #footer {
     background-color: black;
     color: white;
-    padding:5px;
+    padding: 5px;
     position: absolute;
     bottom: 0;
     text-align: center;
     width: 100%;
-    }
+}
 
 #finePrint {
     font-style: italic;
     font-size: 0.8rem;
-    }
-    
+}
