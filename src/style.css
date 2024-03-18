@@ -40,6 +40,13 @@ body {
     line-height: 1.5;
 }
 
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
@@ -72,7 +79,7 @@ select {
 
 :root {
     --brightAccent: #bc13fe;
-  }
+}
 
 
 ::selection {
@@ -82,14 +89,18 @@ select {
 body {
     font-family: 'Arial', sans-serif;
     background: rgb(54, 76, 184);
-    background: radial-gradient(circle, rgba(54, 76, 184, 1) 0%, rgba(252, 70, 239, 1) 100%)
+    background: radial-gradient(circle, rgba(54, 76, 184, 1) 0%, rgba(252, 70, 239, 1) 100%);
+    position: relative;
 }
+
+
 
 /*Nav*/
 
 #nav {
     background-color: black;
     text-align: center;
+    width: 100%;
     padding: 5px
 }
 
@@ -122,6 +133,7 @@ body {
 #hero {
     padding-top: 10px;
     text-align: center;
+    width: 100%;
 }
 
 h1 {
@@ -129,6 +141,7 @@ h1 {
     font-family: 'bebas', sans-serif;
     font-size: 60px;
     padding-top: 30px;
+    line-height: normal;
 }
 
 h3 {
@@ -137,20 +150,64 @@ h3 {
     font-size: 30px;
 }
 
-#infoArea, #menuItemsArea
+p {
+    font-size: 16px;
+}
 
-{
-    width: 1200px;
-    margin: 20px auto;
+#infoArea, #menuItemsArea {
     background-color: black;
     color: white;
-    border-radius: 2rem;
     box-shadow: 0 0 .2rem #fff,
         0 0 .2rem #fff,
         0 0 2rem var(--brightAccent),
         0 0 0.8rem var(--brightAccent),
         0 0 2.8rem var(--brightAccent),
         inset 0 0 1.3rem var(--brightAccent);
+}
+
+@media only screen and (min-width: 1200px) {
+    .menuItems {
+        grid-template-columns: 150px 300px 150px 300px;
+    }
+
+    #infoArea, #menuItemsArea {
+        width: 1200px;
+        margin: auto;
+    }
+
+    #info {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-column-gap: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 1199px) {
+
+    .menuItems img {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .menuItems div {
+        max-width: 405px;
+        margin: 5px auto;
+    }
+}
+
+
+@media only screen and (max-width: 499px) {
+
+    .menuItems div {
+        max-width: 220px;
+        margin: 5px auto;
+
+    }
+
+    #infoArea, #menuItemsArea {
+        min-width: 100%;
+    }
 }
 
 
@@ -162,15 +219,12 @@ h3 {
 
 #infoContainer {
     display: block;
-    width: 800px;
     margin: auto;
+    width: 80%;
 }
 
 #info {
     color: white;
-    display: grid;
-    grid-template-columns: 400px 400px;
-    grid-column-gap: 20px;
 }
 
 #menuItemsArea {
@@ -181,11 +235,9 @@ h3 {
 
 .menuItems {
     display: grid;
-    grid-template-columns: 150px 300px 150px 300px;
     grid-column-gap: 20px;
-    width: 800px;
     margin: 20px auto;
-    padding-left: -20px;
+    width: 80%;
 }
 
 
@@ -203,11 +255,18 @@ h3 {
     background-color: black;
     color: white;
     padding: 5px;
-    position: absolute;
-    bottom: 0;
     text-align: center;
     width: 100%;
+
 }
+
+@media only screen and (min-width: 500px) {
+    #footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
 
 #finePrint {
     font-style: italic;
